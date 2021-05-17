@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+p
+{
+    font-weight: 300;
+    color: #111;
+}
+
+.banniere
+{
+    position: relative;
+    display: flex;
+    background: url(KEBAB.jpg);
+    background-size: cover;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+}
+
+.banniere .content
+{
+    max-width: 900px; 
+    text-align: center;
+}
+
+.banniere .content h2
+{
+    font-size: 5em;
+    color: #fff;
+
+}
+.banniere .content p
+{
+    font-size: 1em;
+    color: #fff;
+
+}
+
+.btn
+{
+    font-size: 1em;
+    color: #fff;
+    background: #ff0157;
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5;
+}
+
+.btn:hover
+{
+    letter-spacing: 20px;
+}
+
+
+

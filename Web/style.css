@@ -1,0 +1,573 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;1,900&display=swap');
+
+* /* Propriété pour toute la page */
+{
+    margin: 0; /* Marge de 0 */
+    padding: 0; /* Ecart de 0 */
+    box-sizing: border-box; /* Prendre le taille de la bordure de la boite aussi */
+    font-family: 'Poppins', sans-serif; /* Police choisie */
+}
+
+p /* Propriété pour tous les paragraphes */
+{
+    font-weight: 300; /* Taille du paragraphe */
+    color: #111; /* Couleur */
+}
+body /* Propriété pour toute la balise body */
+{
+    min-height: 1000px; /* Hauteur minimal du body - 1000 pixel */
+    background: #f1f1f1;
+}
+
+.banniere /* Propriété de la banniere */
+{
+    position: relative; /* Place l'élement a sa position initiale*/
+    display: flex; /* Rendre Element flexible */
+    background: url(image/Nasret.jpg); /* Image */
+    align-items: center; /* Aligner au centre */
+    width: 100%; /* Prendre 100% de la page */
+    min-height: 100vh; /* 100 de la zone d'affichage */
+    justify-content: center; /* L'espace doit être repartie au centre*/
+    background-size: cover; /* Défini la taille de l'image en couvert */
+  
+}
+
+.banniere .content /* Propriété du content dans la banière */
+{
+    max-width: 900px; /* Taille maximum de la largeur a 900px */
+    text-align: center; /* Taille maximum de la largeur a 900px */
+}
+
+.banniere .content h2 /* Propriété du h2 dans le content contenu dans le h2 */
+{
+    font-size: 5em; /* Taille police */
+    color: #fff; 
+
+}
+.banniere .content p /* Banniere > content > P */
+{
+    font-size: 1em;
+    color: #fff;
+    font-weight: bold;
+
+}
+
+.btn /* Propriété bouton */
+{
+    font-size: 1em; /* Taille du bouton */
+    color: #fff; /* Couleur */
+    background: #ff0157; /* Couleur du fond*/
+    display: inline-block; /* Mettre les elements horizontalement */
+    padding: 10px 30px; /* Ecart longueur / largeur en pixel */
+    text-transform: uppercase; /* Police en majuscule */
+    text-decoration: none; /* Pas d'effet sur la police */
+    letter-spacing: 2px; /* Espace entre les lettres*/
+    transition: 0.5; /* 0.5 secondes de transition lorsqu'on touche le bouton */
+    margin-top: 20px; /* Marge en haut */
+ 
+}
+
+.btn:hover
+{
+    letter-spacing: 5px; /* Lorsqu'on passe dessus les lettres se separent */
+}
+
+header /* Propriété header */
+{
+    top: 0; /* Pas de top */
+    z-index: 1000; /* Permet aux élements fils de s'eloigner par exemple le logo cym a gauche et les autres a droite*/
+    padding: 40px 100px; /* Ecart 40px - 100px */
+    width: 100%; /* Taille 100% */
+    left: 0; /* Pas de left*/
+    position: fixed; /* Qui ne bouge pas */
+    justify-content: space-between; /* Les éléments sont répartis équitablement Le bord du premier est aligné sur le
+    début du conteneur et la fin du dernier est alignée sur la fin du conteneur */
+    align-items: center; /* Alignes les elements au centre */
+    transition: 0.5s;
+    display: flex; /* Rendre element flexible*/
+}
+
+header.sticky /* Utilisation de la propriété js */
+{
+    background: #fff;
+    padding: 10px 100px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05); /* Ombre du header */
+}
+
+header .main-logo /* Logo du header */
+{
+    color: #ff0157;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+}
+header.sticky .main-logo /* Logo du header lorsqu'il est en mode sticky */
+{
+color: #111; /* Change la couleur du logo dès que sticky est active*/
+}
+header .navigation 
+{
+    position: relative; /* Permet au header de se placer dans la banniere */
+    display: flex; /* Rendre element flexible*/
+}
+header .navigation li
+{
+    list-style: none; /* enlever les points des lignes */
+    margin-left: 30px;
+}
+
+header .navigation li a
+{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+}
+header.sticky .navigation li a
+{
+    color: #111;    
+}
+
+header .navigation li a:hover
+{
+    color: #ff0157;   
+}
+
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px;
+}
+.slider img {
+    max-width: 100%;
+    display: none;
+}
+img.active {
+    display: block;
+    animation: fade 1s;
+}
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.cont-btn {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+}
+.btn-nav {
+    font-size: 50px;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.titre  /* Propriété du titre */
+{
+    width: 100%; /* Taille 100% de la div */
+    display: flex; /* Element flexible */
+    align-items: center; /* Aligner les elements au centres  */
+    flex-direction: column; /* Mets les titres en colonnes*/
+    justify-content: center; /* Mets les elements au centre selon le milieu de l'espace ex : E | E 
+                                                                                             E |   */
+    font-weight: bold; /* Gras */
+
+}
+.menu .content /* Propriété du content du menu  */
+{
+    display: flex; /* Rendre Element flexible - Utilisation de flex */
+    justify-content: center; /* Mets les ements au centre selon le milieu de l'espace */
+    flex-direction: row-reverse; /* Mets les elements flexible a l'inverse */
+    flex-wrap: wrap;/* Mets une contrainte sur l'element flexible afin qu'ils soient tous groupé */
+    margin-top: 40px; /* Marge du haut a 40px */
+}
+
+.menu .content .box /* Propriété de la div box dans le content */
+{
+    box-shadow: 0 5px 35Px rgba(0,0,0,0.08); /* Ombre */
+    border: 15px solid #fff; /* Bordure solid blanche*/
+    margin: 20px; /* Marge de 20px */
+    width: 340px; /* Taille de la box 340px */
+}
+
+.menu .content .box .imageMenu /* Propriété des imageMenu */
+{
+    position: relative; /* Permet a l'image d'etre dans la box */
+    width: 100%; /* Taille de 100% de la box */
+    height: 300px; /* Hauteur de 300px */
+}
+
+.menu .content .box .imageMenu img /* Propriété des img */
+{
+    position: absolute; /* Permet de se superposer sur d'autres éléments. */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Indique que l'image qui doit être remplacé doit recouvrir tout son conteneur */
+}
+
+.more /* Propriété des avis */
+{
+    background: url(image/banniere.jpg);
+    background-size: cover;
+    color: #fff;
+
+}
+
+
+.more .content /* Propriété du content dans les avis */
+{
+    flex-direction: row; /* Mets les élements sur une ligne dans l'ordre */
+    margin-top: 40px; /* Marge du haut de 40px*/
+    display: flex; /* Rendre element flexible pour utiliser les .. flex */
+    justify-content: center; /* Mets les elements au centre selon le milieu de l'espace */
+    flex-wrap: wrap; /* Mets une contrainte sur l'element flexible afin qu'ils soient tous groupé */
+}
+.more .content .box /* Propriété de la box dans la div content*/
+{
+    width: 340px; /* Hauteur de 340px */
+    margin: 20px; /* Marge de 20px */
+    padding: 40px; /* Ecart de 40px */
+    background: #fff; /* Arrière plan blanc */
+    display: flex; /* Rendre élement flexible */
+    justify-content: center; /* Mets les élements au centre selon le milieu de l'espace */
+    align-items: center; /* Alignes les eléments au centres */
+    flex-direction: column;/* Mets les élements en colonnes exemple : A |
+                                                                      A |
+                                                                      A |*/
+}
+
+.more .content .box .imageMenu /* Propriété des images des menus dans les box */
+{
+    position: relative; /* Permet a l'image de bouger */
+    width: 80px; 
+    height: 80px;
+    margin-bottom: 20px;
+    border-radius: 50%; /* Reduis de 50% l'image en forme de cercle */
+    overflow: hidden; /* Gère le depasssement de l'image dans la box -> si oui n'est pas affiché */
+}
+
+.more .content .box .imageMenu img /* Propriété des img dans imageMenu */
+{
+    position: absolute; /* Image qui ne bougera pas mais peut se mettre sur les élements */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Indique que l'image doit être dans l'intégralité de son conteneur */
+}
+
+.more .content .box .text /* Propriété des text dans .box*/
+{
+    text-align :center;
+}
+.more .content .box .text p /* Propriété des p dans .text */
+{
+    color: #666;
+    font-style: italic;
+
+}
+
+.more .content .box .text h3 /* Propriété des h3 dans .text */
+{
+    color: #ff0157;
+    font-weight: 600;
+   margin-top: 20px;
+   color: #111;
+   font-size: 1em;
+
+}
+
+
+.CYM .content /* Propriété des membres de la CYM */
+{
+    flex-direction: row; /* Mettre les éléments en lignes dans l'ordre croissant*/
+    margin-top: 40px;
+    display: flex; /* Rendre élement flexible */ 
+    justify-content: center; /* Mettre les élements au centre selon l'espace définie au centre*/
+    flex-wrap :wrap; /*Rendre l'element flexible a être affichée sur une seule ligne */
+   
+
+}
+
+.CYM .content .box /* Propriété box de content */
+{
+    width: 250px;
+    margin: 15px;
+}
+
+.CYM .content .box .imgMenu /* Propriété imgMenu de box dans CYM */
+{
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.CYM .content .box .imgMenu img /* Propriété de img dans imgMenu section CYM */
+{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover; /* Permet à l'élément de s'adapter à son conteneur en utilisant sa largeur / hauteur */
+    position: absolute;
+}
+
+.CYM .content .box .text
+{
+    padding: 15px 0 5px;
+}
+.CYM .content .box .text h3
+{
+    font-size: 400;
+    color: #111;
+}
+.CYM
+{
+    background-color: #e0dfdf;
+}
+.AboutUS
+{
+    background-color: #e0dfdf;
+    padding: 80px;
+}
+.AboutUS p
+{
+    font-size: 15px;
+    text-align: justify;
+    color:darkslategrey;
+    font-weight: bold;
+
+}
+
+.ligne /* Propriété des lignes contenus dans aboutUS */
+{
+    position: relative; /* Pouvoir bouger la position avec des critères*/
+    width: 100%;
+    display: flex; /* Rendre élement flexible */
+    justify-content: space-between; /* Element espacée entre eux selon l'espace défini dans l'axe principal (milieu) */
+
+}
+.ligne .text /* Propriété du text dans les lignes dans aboutUS */
+{
+    position: relative; /* Pouvoir bouger la position avec des critères */
+    width: 48%;
+
+}
+.ligne .text .imgAboutUS /* Propriété des img de la section about US */
+{
+    min-height: 300px;
+    display: block; /* Prend toute la largeur disponible */
+    position: relative; /* Pouvoir bouger la position avec des critères*/
+    width: 100%;
+
+}
+
+.ligne .text .imgAboutUS img /* Propriété des img de la div imgAboutUS */
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Copyright
+{
+    text-align: center;
+}
+
+.Copyright a 
+{
+color: #ff0157;
+font-weight: 500;
+}
+
+@media(max-width: 991px) /* Responsive dès que la fenêtre atteint 991 px, rends les élements suivant la description sous dessus */
+{
+    header,
+    header.sticky
+    {
+        padding: 10px 20px;
+    }
+
+    header .navigation
+    {
+        display: none;
+    }
+
+    header .navigation.active
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: calc(100% - 68px);
+        position: fixed;
+        top: 68px;
+        left: 0;
+        flex-direction: column;
+        background: #fff;
+    }
+
+    header .navigation li
+    {
+        margin-left: 0;
+    }
+    header .navigation li a
+    {
+        text-decoration: none;
+        color: #111;
+        font-size: 1.6em;
+        font-weight: 300;
+    }
+    .menuOuvrant
+    {
+        cursor: pointer;
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background-size: 30px;
+        background-position: center; /* Mets l'image au centre */
+        background-repeat: no-repeat; /* Permet de pas spam l'image */
+    }
+    .menuOuvrant.active
+    {
+        background-size: 25px;
+        background-repeat: no-repeat; /* Permet de pas spam l'image */
+        background-position: center; /* Img au centre */
+    }
+    header.sticky .menuOuvrant
+    {
+        filter: invert(1);
+    }
+
+    section
+    {
+        padding: 20px;
+    }
+
+    .banner .content h2
+    {
+        font-size: 3em;
+        color: #fff;
+    }
+
+    .ligne
+    {
+        flex-direction: column;
+    }
+    .ligne .text {
+        position: relative;
+        width: 100%
+    }
+ 
+    .ligne .text .imgMenu .imgAboutUS
+    {
+        height: 300px;
+        margin-top: 20px;
+    }
+    .menu .content
+    {
+        margin-top: 20px;
+
+    }
+    .menu .content .box 
+    {
+        margin: 10px;
+    }
+
+    .menu .content .box .imgMenu
+    {
+        height: 260px;
+    }
+
+    .titre
+    { 
+        text-align: center;
+    }
+
+    .TitreProchain
+    {
+        
+        margin-bottom: 15px;
+        font-weight: 300;
+        font-size: 1.8em;
+        line-height: 1.5em;
+    }
+
+    .more .content .box
+    {
+        margin: 10px;
+        padding: 20px; 
+    }
+}
+
+@media (max-width: 991px)
+{
+    .banniere .content h2
+    {
+        font-size: 2.2em;
+        color: #fff;
+    }
+}
+
+.line
+{
+    background-color: white;
+}
+
+.button-mobile div
+{
+    background-color: white;
+    width: 30px;
+    height: 3px;
+    margin: 5px;
+}
+.button-mobile
+{
+    display: none;
+}
+@media screen and (max-width:768px){
+    .button-mobile{
+            display: block;
+        }
+    }
+
+.imageMenu 
+{
+        position: relative;
+        width: 800px;
+        height: 200px;
+}
+.imageMenu .after 
+{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+        color: #FFF;
+}
+.imageMenu:hover .after
+{
+        display: block;
+        background: rgb(247, 56, 104);
+}
+    
+    
